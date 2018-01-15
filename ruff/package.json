@@ -1,0 +1,25 @@
+{
+    "name": "itinerary",
+    "version": "0.1.0",
+    "description": "",
+    "author": "hackinit",
+    "main": "src/index.js",
+    "ruff": {
+        "boards": {
+            "ruff-mbd-v1": "^4.2.5",
+            "*": "*"
+        },
+        "dependencies": {
+            "lcd1602-pcf8574a-hd44780": "^0.2.7",
+            "button-gpio": "^2.0.0",
+            "ky-016": "^2.0.5",
+            "nodejs-websocket": "^1.7.1",
+            "dht11": "^0.3.6",
+            "gy-30": "^3.0.6"
+        }
+    },
+    "dependencies": {
+        "nodejs-websocket": "^1.7.1",
+        "ws": "^3.0.0"
+    }
+}

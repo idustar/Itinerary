@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Itinerary</title>
+    <!-- 加载CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/tether.min.css">
+    <link rel="stylesheet" href="static/layout.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+</head>
+
+<body>
+<!-- 导航栏 -->
+<ul id="background" class="backgroud">
+    <li class="bgImg" style=background-image:url("static/bg2.jpg")></li>
+</ul>
+
+<div class="environment row">
+    <div class="col-md-4">
+        <p>In you workplace </p>
+        <p>temperature : <span id="temperature"></span></p>
+        <p>humidity : <span id="humidity"></span></p>
+        <p>light intensity : <span id="lightIntensity"></span></p>
+    </div>
+    <div class="col-md-8"></div>
+</div>
+
+<div class="row base">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <p class="welcome">
+            <span id="greetings"></span><span id="username"></span>
+            Good Evening, Akira!
+        </p>
+        <div class="row">
+            <p class="col-md-6" id="day"></p>
+            <p class="col-md-6" id="time">
+
+            </p>
+        </div>
+        <p class="tips" style="margin-top: 2%">
+            <span id="remind"></span>
+            ballballyou, wearsomeclothing
+        </p>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+
+<div class="todolist row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" align="center">
+        <ul>
+            <li>todoThing1</li>
+            <li>todoThing2</li>
+        </ul>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-5 bottom1">
+        <img src="static/sandClock.png" class="timerimg"/>
+        <span class="timerdescription">Study</br></span>
+        <span class="lefttime">01:58:34  </span><span class="left">left</span>
+    </div>
+    <div class="col-md-5 bottom2">
+        <p>
+            Click plus icon to add a Todo thing
+        </p>
+        <div id="addTodo"><img src="static/addTodo.png" class="addimg"/></div>
+        <div id="newTodoBlock" style="display: none"><input id="newTodoName" type="text" placeholder="New Todo Event"></div>
+    </div>
+    <div class="col-md-2 bottom3">
+        <img src="static/calendar.png" class="calenderimg"/>
+        <div class="well">
+
+            <div id="datetimepicker1" class="input-append date" onclick="$('#datetimepicker1').timepicker({
+    timeFormat: 'h:mm p',
+    interval: 15,
+    minTime: '1',
+    maxTime: '12:00pm',
+    defaultTime: '11',
+    startTime: '1:00',
+    dynamic: false,
+    dropdown: true,
+    scrollbar: true
+});">
+                <input data-format="dd/MM/yyyy hh:mm:ss" type="text"></input>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="static/tether.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="src/models/calender.js"></script>
+<script src="src/models/helpers.js"></script>
+<script src="src/models/sync.js"></script>
+<script src="src/models/timer.js"></script>
+<script src="src/models/todo.js"></script>
+<script src="src/models/global.js"></script>
+<script src="src/control.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+</body>
+</html>
